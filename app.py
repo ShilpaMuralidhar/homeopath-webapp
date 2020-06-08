@@ -4,7 +4,7 @@ import pandas as pd
 
 
  #Use pickle to load in the pre-trained model.
-with open(f'/Users/shilpa/Desktop/Appa/homeopathwebapp/SD.pkl', 'rb') as f:
+with open(f'SD.pkl', 'rb') as f:
     loaded_object = pickle.load(f)
 
 app = flask.Flask(__name__, template_folder='templates')
