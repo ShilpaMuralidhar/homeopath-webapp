@@ -5,7 +5,7 @@ import numpy as np
 
 class SD:
     def search(self, str):
-        csv = open("https://github.com/ShilpaMuralidhar/homeopathwebapp.git/blob/master/untitled folder/HEAD_SHEET.csv", "r")
+        csv = open("/Users/shilpa/Desktop/Appa/homeopathwebapp/untitled folder/HEAD_SHEET.csv", "r")
         csvF = csv.readlines()
         num_lines = len(csvF)
         csv.close
