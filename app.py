@@ -6,12 +6,12 @@ import SearchDrugs as SD
 SeaDrugs = SD.SD()
 #import pickle
 
-with open(f"https://github.com/ShilpaMuralidhar/homeopathwebapp/blob/master/SD.pkl", "wb") as file:
+with open(f"SD.pkl", "wb") as file:
 	pickle.dump(SeaDrugs,file) 
 
 
  #Use pickle to load in the pre-trained model.
-with open(f'https://github.com/ShilpaMuralidhar/homeopathwebapp/blob/master/SD.pkl', 'rb') as f:
+with open(f'SD.pkl', 'rb') as f:
     loaded_object = pickle.load(f)
 
 app = flask.Flask(__name__, template_folder='templates')
