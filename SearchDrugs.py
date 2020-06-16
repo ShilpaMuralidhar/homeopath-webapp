@@ -5,8 +5,8 @@ import numpy as np
 
 class SD:
     def search(self, str):
-        csv = open("https://raw.githubusercontent.com/ShilpaMuralidhar/homeopathwebapp/master/HEAD_SHEET.csv", 'r')
-        csvF = csv.readlines()
+        csv = "https://raw.githubusercontent.com/ShilpaMuralidhar/homeopathwebapp/master/HEAD_SHEET.csv"
+        csvF = csv.readlines(csv)
         num_lines = len(csvF)
         csv.close
 
