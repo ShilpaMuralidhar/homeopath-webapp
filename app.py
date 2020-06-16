@@ -34,13 +34,15 @@ def main():
     #index=['input'])
     
     # Get the model's prediction
-    prediction = loaded_object.search(Symptoms)
+        prediction = loaded_object.search(Symptoms)
 
     # Render the form again, but add in the prediction and remind the user
     # of the values they input before
-    return flask.render_template('main.html',
+        return flask.render_template('main.html',
                                 original_input={'Symptoms': Symptoms},
                                                 result=prediction)   
-
+    else:
+        return render_template('main.html')
+        
 if __name__ == '__main__':
     app.run()
