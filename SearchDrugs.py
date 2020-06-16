@@ -2,13 +2,16 @@ import os
 import sys
 import re
 import numpy as np
+import pandas as pd
 
 class SD:
     def search(self, str):
-        csv = "https://raw.githubusercontent.com/ShilpaMuralidhar/homeopathwebapp/master/HEAD_SHEET.csv"
-        csvF = csv.readlines(csv)
+        csv = open("/Users/shilpa/Desktop/Appa/homeopathwebapp/HEAD_SHEET.csv", 'r')
+        csvF = csv.readlines()
+        #url = "https://raw.githubusercontent.com/ShilpaMuralidhar/homeopathwebapp/master/HEAD_SHEET.csv"
+        #csvF = pd.csv_read(url)
         num_lines = len(csvF)
-        csv.close
+        #csv.close
 
         #str = "Nose,Water"
         # print("Enter the search string")
