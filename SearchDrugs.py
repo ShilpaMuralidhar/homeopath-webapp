@@ -3,13 +3,21 @@ import sys
 import re
 import numpy as np
 import pandas as pd
+import io
+import requests
 
 class SD:
     def search(self, str):
-        csv = open("/Users/shilpa/Desktop/Appa/homeopathwebapp/HEAD_SHEET.csv", 'r')
-        csvF = csv.readlines()
-        #url = "https://raw.githubusercontent.com/ShilpaMuralidhar/homeopathwebapp/master/HEAD_SHEET.csv"
-        #csvF = pd.csv_read(url)
+        #csv = open("/Users/shilpa/Desktop/Appa/homeopathwebapp/HEAD_SHEET.csv", 'r')
+        #csvF = csv.readlines()
+        print("1.Hello")
+        url = "https://raw.githubusercontent.com/ShilpaMuralidhar/homeopathwebapp/master/csvF_Head.csv"
+        print("1-1.Hello")
+        s = requests.get(url).content
+        csvF = pd.read_csv(io.StringIO(s.decode('utf-8')))
+        print("2.Hello")
+        print(csvF[10])
+        #csvF.to_csv('csvF_Head.csv', encoding='utf-8')
         num_lines = len(csvF)
         #csv.close
 

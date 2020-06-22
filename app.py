@@ -41,8 +41,8 @@ def main():
         return flask.render_template('main.html',
                                 original_input={'Symptoms': Symptoms},
                                                 result=prediction)   
-    else:
-        return render_template('main.html')
+    #else:
+        #return render_template('main.html')
 
 if __name__ == '__main__':
     app.run()
