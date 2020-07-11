@@ -13,7 +13,7 @@ class SD:
         csv_url = requests.get(url)
         csvF_df = pd.read_csv(io.StringIO(csv_url.text), encoding='utf-8')
         csvF_df= csvF_df.reset_index(drop=True)
-        csvF_df = csvF_df.drop(columns=["Unnamed: 0"])
+        #csvF_df = csvF_df.drop(columns=["Unnamed: 0"])
 
         #csvF_df = csvF_df.drop(columns=["Unnamed: 0", "Unnamed: 5", "Unnamed: 7", "Unnamed: 19", "Unnamed: 21", "Unnamed: 31", "Unnamed: 36", "Unnamed: 37"])
         #csvF_df= csvF_df.set_index('Unnamed:0')
