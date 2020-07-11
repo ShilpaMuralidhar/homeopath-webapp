@@ -13,6 +13,7 @@ with open(f"SD.pkl", "wb") as file:
  #Use pickle to load in the pre-trained model.
 with open(f'SD.pkl', 'rb') as f:
     loaded_object = pickle.load(f)
+   
 
 app = flask.Flask(__name__, template_folder='templates')
 
@@ -26,7 +27,7 @@ def main():
 
     if flask.request.method == 'POST':
        # Extract the input
-        Symptoms = flask.request.form['Symptoms']
+        retVal  = flask.request.form['Symptoms']
 
     # Make DataFrame for the model
     #input_variables = pd.DataFrame([['Symptoms']],
@@ -34,12 +35,12 @@ def main():
     #index=['input'])
     
     # Get the model's prediction
-        prediction = loaded_object.search(Symptoms)
+        prediction = loaded_object.search(retVal)
 
     # Render the form again, but add in the prediction and remind the user
     # of the values they input before
         return flask.render_template('main.html',
-                                original_input={'Symptoms': Symptoms},
+                                original_input={'Symptoms': retVal},
                                                 result=prediction)   
     #else:
         #return render_template('main.html')

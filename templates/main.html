@@ -2,13 +2,13 @@
 <html>
     <style>
         form {
-            margin: auto;
-            width: 35%;
+            margin: 100px 75px 25px 450px;
+            width: 25%;
         }
         
         .result {
-            margin: auto;
-            width: 35%;
+            margin: 10px 10px 2000px 300px;
+            width: 100%;
             border: 1px solid #ccc;
         }
         </style>
@@ -27,14 +27,14 @@
     </fieldset>
 </form>
 <br>
-<div class="result" align="center">
+<div class="result" align="items">
     {% if result %}
     	{% for variable, value in original_input.items() %}
     		<b>{{ variable }}</b> : {{ value }}
     	{% endfor %}
 		<br>
-    	<br> Predicted Drugs are:
-   		<p style="font-size:50px">{{ result }}</p>
+        <br> Predicted Drugs are:
+   		<p style="font-size:15px">{{ result }}</p>
     {% endif %}
 </div>
 
