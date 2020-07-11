@@ -10,8 +10,10 @@ import csv
 class SD:
     def search(self, str):
         url = "https://raw.githubusercontent.com/ShilpaMuralidhar/homeopathwebapp/master/csvF_Head.csv"
-        csv_url = requests.get(url)
-        csvF_df = pd.read_csv(io.StringIO(csv_url.text), encoding='utf-8')
+        #csv_url = requests.get(url)
+        csvF_df = pd.read_csv(url, encoding='utf-8')
+
+        #csvF_df = pd.read_csv(io.StringIO(csv_url.text), encoding='utf-8')
         csvF_df= csvF_df.reset_index(drop=True)
         #csvF_df = csvF_df.drop(columns=["Unnamed: 0"])
 
