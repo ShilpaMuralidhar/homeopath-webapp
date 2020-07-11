@@ -4,7 +4,7 @@ import re
 import numpy as np
 import pandas as pd
 import io
-import requests
+#import requests
 import csv
 
 class SD:
