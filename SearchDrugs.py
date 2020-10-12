@@ -9,7 +9,7 @@ import csv
 
 class SD:
     def search(self,str):
-        url = "https://raw.githubusercontent.com/ShilpaMuralidhar/homeopathwebapp/master/df_head_back_extr_fe.csv"
+        url = "https://raw.githubusercontent.com/ShilpaMuralidhar/homeopathwebapp/master/index_ignored_merged.csv"
         #csv_url = requests.get(url)
         csvF_df = pd.read_csv(url, encoding='utf-8')
 
