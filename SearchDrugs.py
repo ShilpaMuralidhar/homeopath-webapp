@@ -107,15 +107,15 @@ class SD:
                 if (rank[i] > 0) and (ind > 0):
                     print(ind, ". Suggestion Medicine = ", re.split(",", csvF[arr[ind-1]])[0], sep='')
                     retval = (retval) + ". Suggestion Medicine = " + (re.split(",", csvF[arr[ind-1]])[0]) + "\n"
-                    print("   Matching symptoms are", match_symp[arr[ind-1]])
-                    retval = (retval) + "   Matching symptoms are" +( match_symp[arr[ind-1]]) + "\n"
+                    print("   Matching symptoms are ", match_symp[arr[ind-1]])
+                    retval = (retval) + "   Matching symptoms are " +( match_symp[arr[ind-1]]) + "\n"
                     otherSymps = re.split(",", csvF[arr[ind-1]])
                     max = 0
                     for x in range (1, len(otherSymps)):
                         if (otherSymps[x] != ""):
                             if (max <= 3):
-                                print("   Other possibly associated symptoms are", otherSymps[x])
-                                retval = (retval) + "   Other possibly associated symptoms are" + (otherSymps[x]) + "\n"
+                                print("   Other possibly associated symptoms are ", otherSymps[x])
+                                retval = (retval) + "   Other possibly associated symptoms are " + (otherSymps[x]) + "\n"
                                 max = max + 1
                             else:
                                 break
