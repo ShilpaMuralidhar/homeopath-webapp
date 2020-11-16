@@ -23,7 +23,7 @@ def main():
 
     if flask.request.method == 'GET':
         # Just render the initial form, to get input
-        return(flask.render_template('index.html'))
+        return(flask.render_template('main.html'))
 
     if flask.request.method == 'POST':
        # Extract the input
@@ -39,11 +39,11 @@ def main():
 
     # Render the form again, but add in the prediction and remind the user
     # of the values they input before
-        return flask.render_template('index.html',
+        return flask.render_template('main.html',
                                 original_input={'Symptoms': retVal},
                                                 result=prediction)   
     #else:
-        #return render_template('index.html')
+        #return render_template('main.html')
 
 if __name__ == '__main__':
     app.run()
