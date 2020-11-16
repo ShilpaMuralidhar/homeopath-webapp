@@ -15,7 +15,7 @@ with open(f'SD.pkl', 'rb') as f:
     loaded_object = pickle.load(f)
    
 
-app = flask.Flask(__name__, template_folder='template_1')
+app = flask.Flask(__name__, template_folder='template')
 
 # Set up the main route
 @app.route('/', methods=['GET', 'POST'])
