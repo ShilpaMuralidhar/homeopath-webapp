@@ -1,6 +1,9 @@
 import flask
 import pickle
 import pandas as pd
+#from flask_bootstrap import Bootstrap
+
+
 
 import SearchDrugs as SD
 SeaDrugs = SD.SD()
@@ -16,6 +19,7 @@ with open(f'SD.pkl', 'rb') as f:
    
 
 app = flask.Flask(__name__, template_folder='template')
+#Bootstrap(app)
 
 # Set up the main route
 @app.route('/', methods=['GET', 'POST'])
