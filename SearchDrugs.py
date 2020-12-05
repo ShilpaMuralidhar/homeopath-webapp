@@ -77,27 +77,26 @@ class SD:
                             top3[symp] = line
         idx = int(np.argmax(rank))
         arr = rank.argsort()[-3:][::-1]
-        print("Symptoms found = ", rank_symp)
-        retval = "Symptoms found = \n" #+ str(rank_symp) +"\n"
-        print ("Found ", len(arr), "possible suggestions")
-        retval = retval + "Found " + "possible suggestions\n"
-        # print(arr)
-        # print(rank)
-        if (rank[arr[2]] == rank[arr[1]] == rank[arr[0]]):
-            print("Entered symptom is found in three possible cases")
-            retval = (retval) + "Entered symptom is found in three possible cases\n"
-            print("Try entering more specific symptoms")
-            retval = (retval) + "Try entering more specific symptoms\n"
-        elif (rank[arr[2]] == rank[arr [1]]) or (rank[arr[1]] == rank[arr[0]]):
-            print("Entererd symptom is found in two possible cases")
-            retval = (retval) + "Entered symptom is found in two possible cases\n"
-            print("Try entering more specific symptoms")
-            retval = (retval) + "Try entering more specific symptoms\n"
-        else:
-            print("Entered symptom is a unique possible case")
-            retval = (retval) + "Entered symptom is a unique possible case\n"
-        # print(idx, arr)
-        print(rank[arr[0]], rank[arr[1]], rank[arr[2]])
+        #print("Symptoms found = ", rank_symp)
+        retval = "" #+ str(rank_symp) +"\n"
+        #print ("Found ", len(arr), "possible suggestions")
+        #retval = retval #+ "Found " + "possible suggestions \n"
+
+        #if (rank[arr[2]] == rank[arr[1]] == rank[arr[0]]):
+        #    print("Entered symptom is found in three possible cases")
+        #    retval = (retval) + "Entered symptom is found in three possible cases\n"
+            #print("Try entering more specific symptoms")
+            #retval = (retval) + "Try entering more specific symptoms\n"
+        #elif (rank[arr[2]] == rank[arr [1]]) or (rank[arr[1]] == rank[arr[0]]):
+        #    print("Entererd symptom is found in two possible cases")
+        #    retval = (retval) + "Entered symptom is found in two possible cases\n"
+            #print("Try entering more specific symptoms")
+            #retval = (retval) + "Try entering more specific symptoms\n"
+        #else:
+        #    print("Entered symptom is a unique possible case")
+        #    retval = (retval) + "Entered symptom is a unique possible case\n"
+        #print(idx, arr)
+        #print(rank[arr[0]], rank[arr[1]], rank[arr[2]])
 
         if (idx < 2):
             print("No matching medicine found")
@@ -106,10 +105,10 @@ class SD:
             ind = 1
             for i in arr:
                 if (rank[i] > 0) and (ind > 0):
-                    print(ind, ". Suggestion Medicine = ", re.split(",", csvF[arr[ind-1]])[0], sep='')
-                    retval = (retval) + ". Suggestion Medicine = " + (re.split(",", csvF[arr[ind-1]])[0]) + "\n"
-                    print("   Matching symptoms are ", match_symp[arr[ind-1]])
-                    retval = (retval) + "   Matching symptoms are " +( match_symp[arr[ind-1]]) + "\n"
+                    print(ind, "Suggestion Medicine : ", re.split(",", csvF[arr[ind-1]])[0], sep='')
+                    retval = (retval) +"Suggestion Medicine : " + (re.split(",", csvF[arr[ind-1]])[0]) + "\n" 
+                    #print("   Matching symptoms are ", match_symp[arr[ind-1]])
+                    #retval = (retval) + "   Matching symptoms are " +( match_symp[arr[ind-1]]) + "\n"
                     otherSymps = re.split(",", csvF[arr[ind-1]])
                     max = 0
                     for x in range (1, len(otherSymps)):
@@ -122,7 +121,7 @@ class SD:
                                 break
                     ind = ind + 1
 
-        #retVal = re.split(",", csvF[arr[0]])[1] + "\n" + re.split(",", csvF[arr[1]])[1]+ "\n" + re.split(",", csvF[arr[2]])[1]
+        #retval = re.split(",", csvF[arr[0]])[1] + "\n" + re.split(",", csvF[arr[1]])[1]+ "\n" + re.split(",", csvF[arr[2]])[1]
         #retVal1 = re.split(",", csvF[arr[0]])[0] + "\n" + re.split(",", csvF[arr[1]])[0]+ "\n" + re.split(",", csvF[arr[2]])[0]
 
         #print(retVal)

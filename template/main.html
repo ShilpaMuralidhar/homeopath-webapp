@@ -76,14 +76,15 @@
                 <br>
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="result" align="center">
+                        <div class="result" align="left">
                             {% if result %}
                                 {% for variable, value in original_input.items() %}
                                     <b>{{ variable }}</b> : {{ value }}
                                 {% endfor %}
-                                <br> Predicted Drugs are:
-                                <br
-                                <p>{{ result }}</p>
+                                <!--<br> Predicted Drugs are:
+                                <br>-->
+                                
+                                <p><span style="white-space: pre-wrap">{{ result }}</span></p>
                             {% endif %}          
                         </div>
                     </div>
