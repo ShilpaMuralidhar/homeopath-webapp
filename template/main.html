@@ -54,16 +54,16 @@
     <!-- Masthead-->
     <header class="masthead">
         <div class="container">
-            <!--<div class="masthead-subheading">Welcome To Homeo App!</div>->
-            <!--<div class="masthead heading text-lowercase">Please Enter Your Symptoms</div>-->
-            <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#search">Welcome to Homeo App</a>
+            <div class="masthead-subheading">Welcome To Homeo App!</div>
+            <div class="masthead heading text-uppercase">Please Enter Your Symptoms</div>
+            <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#search">Click to continue</a>
         </div>
     </header>
     <!-- Search-->
     <section class="page-section" id="search">
         <div class="container">
             <div class="text-center">
-                <h2 class="section-heading text-uppercase">Please Enter Your Symptoms</h2>
+                <h2 class="section-heading text-lowercase">Please Enter Your Symptoms</h2>
                 <form action="{{ url_for('main') }}" method="POST">
                     <fieldset>
                         <!--<legend>Symptoms:</legend>-->
