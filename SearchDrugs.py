@@ -9,8 +9,8 @@ import csv
 
 class SD:
     def search(self,str):
-        url = "https://raw.githubusercontent.com/ShilpaMuralidhar/homeopathwebapp/master/index_ignored_merged.csv"
-        #url = "/Users/shilpa/Desktop/Appa/homeopathwebapp/index_ignored_merged.csv"
+        url = "https://raw.githubusercontent.com/ShilpaMuralidhar/homeopathwebapp/master/testEXTERMITIES.csv"
+        #url = "/Users/shilpa/Desktop/Appa/homeopathwebapp/testEXTERMITIES.csv"
         #csv_url = requests.get(url)
         csvF_df = pd.read_csv(url, encoding='utf-8')
 
@@ -105,8 +105,8 @@ class SD:
             ind = 1
             for i in arr:
                 if (rank[i] > 0) and (ind > 0):
-                    print(ind, "Suggestion Medicine: ", re.split(",", csvF[arr[ind-1]])[0], sep='')
-                    retval = (retval) +"Suggestion Medicine: " + (re.split(",", csvF[arr[ind-1]])[0]) + "\n" 
+                    print(ind, "Suggestion Medicine :  ", re.split(",", csvF[arr[ind-1]])[0], sep='')
+                    retval = (retval) +"Suggestion Medicine :  " + (re.split(",", csvF[arr[ind-1]])[0]) + "\n" 
                     #print("   Matching symptoms are ", match_symp[arr[ind-1]])
                     #retval = (retval) + "   Matching symptoms are " +( match_symp[arr[ind-1]]) + "\n"
                     otherSymps = re.split(",", csvF[arr[ind-1]])
@@ -114,8 +114,8 @@ class SD:
                     for x in range (1, len(otherSymps)):
                         if (otherSymps[x] != ""):
                             if (max <= 3):
-                                print("   Other possibly associated symptoms are: ", otherSymps[x])
-                                retval = (retval) + "   Other possibly associated symptoms are: " + (otherSymps[x]) + "\n"
+                                print("   Other possibly associated symptoms are  :   ", otherSymps[x])
+                                retval = (retval) + "   Other possibly associated symptoms are  :   " + (otherSymps[x]) + "\n"
                                 max = max + 1
                             else:
                                 break
